@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { AiFillMoon, AiFillSun } from "react-icons/ai";
 
 const DarkTheme = () => {
   const [theme, setTheme] = useState(() => {
@@ -22,9 +23,12 @@ const DarkTheme = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 dark:bg-white bg-cyan-900 text-white dark:text-cyan-900"
+      // className="p-2 dark:bg-white bg-cyan-900 text-white dark:text-cyan-900"
     >
-      Toggle Theme
+      {/* {console.log(theme, "click")} */}
+      {/* Toggle Theme
+       */}
+      {theme ? <AiFillMoon /> : <AiFillSun />}
     </button>
   );
 };
